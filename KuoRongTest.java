@@ -1,29 +1,31 @@
 /*
-	×Ô¶¨ÒåÊı×éÀ©Èİ¹æÔò£¬µ±ÒÑ´æ´¢ÔªËØÊıÁ¿´ïµ½×ÜÈİÁ¿µÄ 80%Ê±£¬À©Èİ 1.5 ±¶¡£ ÀıÈç£¬×ÜÈİÁ¿ÊÇ 10£¬µ±ÊäÈëµÚ 8 ¸öÔªËØÊ±£¬Êı×é½øĞĞÀ©Èİ£¬ÈİÁ¿´Ó 10 ±ä 15¡£ 
+	è‡ªå®šä¹‰æ•°ç»„æ‰©å®¹è§„åˆ™ï¼Œå½“å·²å­˜å‚¨å…ƒç´ æ•°é‡è¾¾åˆ°æ€»å®¹é‡çš„ 80%æ—¶ï¼Œæ‰©å®¹ 1.5 å€ã€‚ ä¾‹å¦‚ï¼Œæ€»å®¹é‡æ˜¯ 10ï¼Œå½“è¾“å…¥ç¬¬ 8 ä¸ªå…ƒç´ æ—¶ï¼Œæ•°ç»„è¿›è¡Œæ‰©å®¹ï¼Œå®¹é‡ä» 10 å˜ 15ã€‚ 
  */
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class KuoRongTest{
 
     public static void main(String[] args){
     	
-		//×Ô¶¨ÒåÊı×éµÄÈİÁ¿²¢´´½¨
-    	System.out.println("ÇëÊäÈëÊı×éµÄÈİÁ¿£º");
+		//è‡ªå®šä¹‰æ•°ç»„çš„å®¹é‡å¹¶åˆ›å»º
+    	System.out.println("è¯·è¾“å…¥æ•°ç»„çš„å®¹é‡ï¼š");
     	Scanner sc = new Scanner(System.in);
     	int num = sc.nextInt();
     	int[] arr = new int[num];
-		//Ñ­»·¶ÔÊı×é½øĞĞ¸³Öµ£¬²¢¿ØÖÆÔÚ°Ù·ÖÖ®80
+		//å¾ªç¯å¯¹æ•°ç»„è¿›è¡Œèµ‹å€¼ï¼Œå¹¶æ§åˆ¶åœ¨ç™¾åˆ†ä¹‹80
     	int i = 0;
     	while (i < (arr.length-1)*0.8){
-    		System.out.println("ÇëÊäÈëµÚ"+(i+1)+"¸öÊı");
+    		System.out.println("è¯·è¾“å…¥ç¬¬"+(i+1)+"ä¸ªæ•°");
     		arr[i] = sc.nextInt();
     		i++;
     		
     	}
-		//³¬¹ı´´½¨ĞÂµÄÊı×é½øĞĞÀ©Èİ£¬ÒÔ¼°½«Ô­Êı×éµÄÖµ½øĞĞ¸³Öµ
+		//è¶…è¿‡åˆ›å»ºæ–°çš„æ•°ç»„è¿›è¡Œæ‰©å®¹ï¼Œä»¥åŠå°†åŸæ•°ç»„çš„å€¼è¿›è¡Œèµ‹å€¼
     	int[] brr = new int[new Double(num*1.5).intValue()];
     	System.arraycopy(arr,0,brr,0,(i-1));
-    	System.out.println(brr.length);
+    	System.out.println("æ–°æ•°ç»„çš„é•¿åº¦ä¸ºï¼š" + brr.length);
+        System.out.println("æ–°æ•°ç»„ä¸­çš„å€¼ï¼š" + Arrays.toString(brr));
     }
 
 }
